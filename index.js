@@ -1,12 +1,15 @@
 var katzDeliLine = []; //at the beginning of the day the deli line is empty
-var newcustomer; //accepts each new customer's name
+var n = 0 ; //accepts each new customer's name
 
-function takeANumber (katzDeliLine, newcustomer){
-katzDeliLine.push(newcustomer); //adds new customer to array
-return ("Welcome, "+newcustomer+". You are number "+katzDeliLine.length+" in line.");
+function takeANumber (katzDeliLine) {
+//let n = 0
+ n++
+katzDeliLine.push(n); //adds new customer to array
+ return ("Welcome, you are number "+ n +" in line.");
 }
 
-function nowServing(katzDeliLine){
+
+function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0)
   return "There is nobody waiting to be served!";
   for (let i = 0;i<katzDeliLine.length;i++) {
@@ -14,6 +17,7 @@ function nowServing(katzDeliLine){
       return "Currently serving " + current +".";
 }
 }
+
 
   function currentLine (katzDeliLine) {
   if (katzDeliLine.length === 0) {
